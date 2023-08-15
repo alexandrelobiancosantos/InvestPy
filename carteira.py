@@ -10,8 +10,8 @@ pd.options.mode.chained_assignment = None
 1. ESCOLHER A LISTA DE ATIVOS
    Pesquise nomes de ativos em https://finance.yahoo.com/
 '''
-#ativos = ['PETR4.SA', 'VALE', 'AMER3.SA', 'MGLU3.SA', 'ITUB4.SA', 'BRML3.SA', 'BRKM5.SA', 'VALE3.SA', 'ITUB4.SA', 'BRVALE']
-ativos = ['PETR4.SA', 'VALE', 'MGLU3.SA', 'VALE3.SA','ITUB4.SA']
+#ativos = ['PETR4.SA', 'VALE', 'AMER3.SA', 'MGLU3.SA', 'ITUB4.SA', 'BRKM5.SA', 'VALE3.SA', 'ITUB4.SA', 'BRVALE']
+ativos = ['PETR4.SA', 'PETR3.SA', 'VALE3.SA', 'MGLU3.SA', 'ITUB4.SA', 'BRKM5.SA', 'GC=F', 'WEGE3.SA', 'ABEV3.SA', 'AERI3.SA', 'CIEL3.SA','PRIO3.SA', 'BBSE3.SA','HYPE3.SA','ASAI3.SA','SBSP3.SA','CPLE6.SA','ELET6.SA']
 
 # Dicionário para armazenar os resultados de cada ativo
 resultados_por_ativo = {}
@@ -20,7 +20,10 @@ resultados_por_ativo = {}
 for ativo in ativos:
 
     # Baixar dados do ativo escolhido
-    dados_ativo = yf.download(ativo, '2000-12-31')
+    # Perido definido
+    # dados_ativo = yf.download(ativo, '2020-12-31', '2023-08-14')
+    # Perido desde 2020
+    dados_ativo = yf.download(ativo, '2013-12-31')
 
     # Calcular os retornos diários
     dados_ativo['retornos'] = dados_ativo['Adj Close'].pct_change().dropna()
@@ -107,4 +110,3 @@ for ativo, resultados in resultados_por_ativo.items():
         resultados['Retorno Buy and Hold']
     ))
     
-

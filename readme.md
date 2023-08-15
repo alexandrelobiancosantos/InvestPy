@@ -19,25 +19,19 @@ Você pode instalá-las usando o gerenciador de pacotes `pip`:
 pip install pandas yfinance matplotlib numpy
 ```
 
+ou atraves do requirements.txt
+
 ## Como Usar
 
 1. Clone este repositório para o seu sistema local.
 
-```bash
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-```
-
 2. Navegue até o diretório clonado.
-
-```bash
-cd nome-do-repositorio
-```
 
 3. Execute os códigos Python fornecidos:
 
-- `analise_compra_venda_simples.py`: Analisa um único ativo e exibe os resultados de compra e venda.
+- `investimento.py`: Analisa um único ativo e exibe os resultados de compra e venda.
 
-- `analise_compra_venda_multipla.py`: Analisa uma lista de ativos e exibe os resultados comparativos.
+- `carteira.py`: Analisa uma lista de ativos e exibe os resultados comparativos.
 
 4. Siga as instruções exibidas no terminal para interagir com os códigos e visualizar os resultados.
 
@@ -53,10 +47,8 @@ Contribuições são bem-vindas! Se você encontrar bugs, tiver sugestões de me
 
 ## Licença
 
-Este projeto é licenciado sob a [Licença MIT](LICENSE).
+Este projeto é livre.
 
 ---
 
 **Aviso**: Este projeto é fornecido "no estado em que se encontra", sem garantias de qualquer tipo. Use por sua conta e risco.
-
-Espero que isso atenda às suas necessidades. Sinta-se à vontade para personalizar o `README.md` conforme necessário e adicionar informações adicionais relevantes.

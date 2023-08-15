@@ -9,6 +9,7 @@ pd.options.mode.chained_assignment = None
 '''
 1. ESCOLHER O ATIVO
    Pesquise nomes de ativos em https://finance.yahoo.com/
+   ex.: 'PETR4.SA', 'VALE', 'AMER3.SA', 'MGLU3.SA', 'ITUB4.SA', 'BRKM5.SA', 'VALE3.SA', 'ITUB4.SA',
 '''
 ativo = 'PETR4.SA'
 
@@ -20,7 +21,7 @@ ativo = 'PETR4.SA'
    #dados_ativo.to_csv('dados_petroleo.csv')
 '''
 
-dados_ativo = yf.download(ativo, '2000-12-31')
+dados_ativo = yf.download(ativo, '2020-12-31', '2023-08-14')
 
 '''
 3. VERIFICAR CONSISTÊNCIA DOS DADOS
@@ -125,13 +126,13 @@ print(f"Retorno Buy and Hold: {retorno_buy_and_hold * 100:.2f}%")
 
 # Graficos Uteis
 
-'''
+
 plt.figure(figsize = (12, 5))
 plt.scatter(dados_ativo.loc[data_compra].index, dados_ativo.loc[data_compra]['Adj Close'], marker = '^', c = 'g')
 plt.plot(dados_ativo['Adj Close'], alpha = 0.7)
 plt.show()
 
-
+'''
 plt.figure(figsize = (12, 5))
 plt.plot(data_compra, performance_acumulada)
 plt.show()
