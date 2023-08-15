@@ -1,36 +1,62 @@
-# Análise de Sinais de Compra e Venda usando RSI
+Claro, aqui está um exemplo de arquivo `README.md` elegante para os códigos de análise de compra e venda de ações:
 
-Este é um projeto de análise de sinais de compra e venda utilizando o Índice de Força Relativa (RSI) em Python. O objetivo é identificar oportunidades de compra e venda com base nas variações de preço de um ativo financeiro.
+# Análise de Compra e Venda de Ações
 
-## Descrição
+Este repositório contém códigos Python para a análise de compra e venda de ações com base no Índice de Força Relativa (RSI) e outras métricas relacionadas. Esses códigos permitem a avaliação de ativos específicos ou uma lista de ativos para identificar possíveis oportunidades de negociação.
 
-Este projeto utiliza a biblioteca Pandas, yfinance e Matplotlib para baixar dados históricos de um ativo escolhido e calcular o RSI. O RSI é um indicador que ajuda a avaliar se um ativo está sobrecomprado ou sobrevendido. Com base no RSI, são gerados sinais de compra e venda, e é calculada a performance das operações.
+## Requisitos
 
-## Funcionalidades
+Certifique-se de ter as seguintes bibliotecas Python instaladas antes de executar os códigos:
 
-- Baixar dados históricos de um ativo financeiro através do Yahoo Finance.
-- Calcular o RSI e identificar sinais de compra e venda.
-- Apresentar gráficos destacando as datas de compra e venda.
-- Calcular a performance das operações.
+- pandas
+- yfinance
+- matplotlib
+- numpy
+
+Você pode instalá-las usando o gerenciador de pacotes `pip`:
+
+```bash
+pip install pandas yfinance matplotlib numpy
+```
 
 ## Como Usar
 
-1. Instale as bibliotecas necessárias: Pandas, yfinance e Matplotlib.
-2. Escolha o ativo de interesse no código, por exemplo: `ativo = 'PETR4.SA'`.
-3. Execute o código Python.
-4. Visualize os resultados, incluindo gráficos de compra e venda e análise de performance.
+1. Clone este repositório para o seu sistema local.
 
-## Exemplo de Uso
+```bash
+git clone https://github.com/seu-usuario/nome-do-repositorio.git
+```
 
-```python
-# Definir o ativo de interesse
-ativo = 'PETR4.SA'
+2. Navegue até o diretório clonado.
 
-# Baixar e analisar os dados do ativo
-# ...
+```bash
+cd nome-do-repositorio
+```
 
-# Identificar datas de compra e venda
-# ...
+3. Execute os códigos Python fornecidos:
 
-# Calcular e imprimir a performance das operações
-# ...
+- `analise_compra_venda_simples.py`: Analisa um único ativo e exibe os resultados de compra e venda.
+
+- `analise_compra_venda_multipla.py`: Analisa uma lista de ativos e exibe os resultados comparativos.
+
+4. Siga as instruções exibidas no terminal para interagir com os códigos e visualizar os resultados.
+
+## Notas Importantes
+
+- Este projeto é fornecido apenas para fins educacionais e informativos. Não é um conselho de investimento, e os resultados podem variar.
+- Certifique-se de entender completamente a lógica por trás dos códigos antes de usá-los para decisões de investimento.
+- A negociação de ações envolve riscos e requer conhecimento sólido do mercado financeiro.
+
+## Contribuições
+
+Contribuições são bem-vindas! Se você encontrar bugs, tiver sugestões de melhorias ou quiser adicionar recursos adicionais, fique à vontade para enviar um pull request.
+
+## Licença
+
+Este projeto é licenciado sob a [Licença MIT](LICENSE).
+
+---
+
+**Aviso**: Este projeto é fornecido "no estado em que se encontra", sem garantias de qualquer tipo. Use por sua conta e risco.
+
+Espero que isso atenda às suas necessidades. Sinta-se à vontade para personalizar o `README.md` conforme necessário e adicionar informações adicionais relevantes.
