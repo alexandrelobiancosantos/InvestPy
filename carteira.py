@@ -23,7 +23,7 @@ for ativo in ativos:
     # Perido definido
     # dados_ativo = yf.download(ativo, '2020-12-31', '2023-08-14')
     # Perido desde 2020
-    dados_ativo = yf.download(ativo, '2013-12-31')
+    dados_ativo = yf.download(ativo)
 
     # Calcular os retornos diários
     dados_ativo['retornos'] = dados_ativo['Adj Close'].pct_change().dropna()
@@ -83,13 +83,6 @@ for ativo in ativos:
         'Performance Acumulada': performance_acumulada[-1] * 100,
         'Retorno Buy and Hold': retorno_buy_and_hold * 100
     }
-'''
-# Exibir resultados para cada ativo
-for ativo, resultados in resultados_por_ativo.items():
-    print(f"Resultados para o ativo: {ativo}")
-    for metrica, valor in resultados.items():
-        print(f"{metrica}: {valor:.2f}")
-    print("=" * 40)'''
 
 # Exibir resultados em forma de tabela
 print("Resultados por Ativo:")

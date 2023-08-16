@@ -9,9 +9,10 @@ pd.options.mode.chained_assignment = None
 '''
 1. ESCOLHER O ATIVO
    Pesquise nomes de ativos em https://finance.yahoo.com/
-   ex.: 'PETR4.SA', 'VALE', 'AMER3.SA', 'MGLU3.SA', 'ITUB4.SA', 'BRKM5.SA', 'VALE3.SA', 'ITUB4.SA',
+   ex.: 'PETR4.SA', 'PETR3.SA', 'VALE3.SA', 'MGLU3.SA', 'ITUB4.SA', 'GC=F', 'WEGE3.SA', 'ABEV3.SA', 'AERI3.SA', 'CIEL3.SA','PRIO3.SA', 'BBSE3.SA','HYPE3.SA','ASAI3.SA','SBSP3.SA','CPLE6.SA','ELET6.SA'
+
 '''
-ativo = 'PETR4.SA'
+ativo = 'ABEV3.SA'
 
 ''' 
 2. BAIXAR DADOS DO ATIVO ESCOLHIDO
@@ -21,13 +22,13 @@ ativo = 'PETR4.SA'
    #dados_ativo.to_csv('dados_petroleo.csv')
 '''
 
-dados_ativo = yf.download(ativo, '2020-12-31', '2023-08-14')
+dados_ativo = yf.download(ativo)
 
 '''
 3. VERIFICAR CONSISTÊNCIA DOS DADOS
 '''
-#dados_ativo['Adj Close'].plot()
-#plt.show()
+dados_ativo['Adj Close'].plot()
+plt.show()
 
 '''
 4. TRATAMENTO DE RETORNOS
