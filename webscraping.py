@@ -5,11 +5,6 @@ import pandas as pd
 import time
 
 
-
-'''
-
-'''
-
 driver = webdriver.Chrome(service = Service(ChromeDriverManager().install()))
 
 
